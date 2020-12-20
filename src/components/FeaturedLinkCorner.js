@@ -1,7 +1,7 @@
 import React from 'react'
 import './FeaturedLinkCorner.css'
 
-export default ({ url, style, className = '', color = '#151513' }) => (
+export default ({ url, style, className = '', color = '#3b5998' }) => (
   <a
     className={`FeaturedLinkCorner ${className}`}
     href={url}
