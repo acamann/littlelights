@@ -1,11 +1,11 @@
 {
-  "name": "yellowcake",
-  "HomePage": "https://yellowcake.netlify.com/",
-  "description": "An opinionated starter project for creating lightning-fast websites with Gatsby v2 and Netlify CMS v2",
+  "name": "littlelights",
+  "HomePage": "https://littlelightshouston.netlify.app/",
+  "description": "Little Lights is an organization in Houston, TX that offers fun and engaging local outreach and service opportunities to families with young children.",
   "version": "2.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thriveweb/yellowcake"
+    "url": "https://github.com/acamann/littlelights"
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
