@@ -2,50 +2,17 @@ const postcssPresetEnv = require('postcss-preset-env')
 
 module.exports = {
   siteMetadata: {
-    title: 'Yellowcake',
-    siteUrl: 'https://yellowcake.netlify.com'
+    title: 'Little Lights',
+    siteUrl: 'https://littlelightshouston.netlify.app'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-yaml',
     {
-      resolve: 'gatsby-plugin-google-tagmanager',
-      options: {
-        /*id: 'GTM-add_your_tag_here',*/
-        id: 'GTM-P4RNF8D',
-        includeInDevelopment: false
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        runtimeCaching: [
-          {
-            // Use cacheFirst since these don't need to be revalidated (same RegExp
-            // and same reason as above)
-            urlPattern: /(\.js$|\.css$|static\/)/,
-            handler: `cacheFirst`
-          },
-          {
-            // Add runtime caching of various other page resources
-            urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
-            handler: `staleWhileRevalidate`
-          },
-          {
-            // uploadcare
-            urlPattern: /^https:\/\/ucarecdn.com\/[-a-zA-Z0-9@:%_\+.~#?&//=]*?\/10x\//,
-            handler: `staleWhileRevalidate`
-          }
-        ],
-        skipWaiting: true,
-        clientsClaim: true
-      }
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'yellowcake',
-        short_name: 'yellowcake',
+        name: 'Little Lights',
+        short_name: 'littlelights',
         start_url: '/',
         background_color: '#00C2BD',
         theme_color: '#00C2BD',
@@ -55,8 +22,6 @@ module.exports = {
         icon: `${__dirname}/static/images/logo.svg` // This path is relative to the root of the site.
       }
     },
-
-    // Add static assets before markdown files
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -101,7 +66,7 @@ module.exports = {
       options: {
         postCssPlugins: [
           postcssPresetEnv({
-            browsers: '> 0.5%, last 2 versions, ie 11'
+            browserslist: '> 0.5%, last 2 versions, ie 11'
           })
         ]
       }
@@ -111,7 +76,7 @@ module.exports = {
       options: {
         postCssPlugins: [
           require(`postcss-preset-env`)({
-            browsers: '> 0.5%, last 2 versions, ie 11'
+            browserslist: '> 0.5%, last 2 versions, ie 11'
           })
         ]
       }
