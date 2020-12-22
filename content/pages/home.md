@@ -2,7 +2,7 @@
 template: HomePage
 slug: ""
 title: Little Lights Houston
-featuredImage: https://ucarecdn.com/159203d3-881d-4218-baa1-ca4427b48d0d/
+featuredImage: https://ucarecdn.com/07130a0c-0d19-412b-aff5-4d1075aa6346/-/crop/2072x1257/237,187/-/preview/-/enhance/50/
 subtitle: Little Lights is an organization that offers fun and engaging local
   outreach opportunities to families with young children.
 meta:
