@@ -1,11 +1,11 @@
 import React from 'react'
 import './Footer.css'
+import FacebookLink from './FacebookLink'
 
 export default () => (
   <div>
     <h2 className="taCenter">
-      Follow us on{' '}
-      <a href="https://www.facebook.com/LittleLightsHouston/">Facebook</a>
+      <FacebookLink url="https://www.facebook.com/LittleLightsHouston/" />
     </h2>
     <br />
     <footer className="footer">

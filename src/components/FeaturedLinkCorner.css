@@ -9,7 +9,7 @@
   border: 0;
   max-width: 6rem;
   max-height: 6rem;  
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .FeaturedLinkCorner .octo-arm {
@@ -23,7 +23,8 @@
 @media (max-width: 600px) {
   .FeaturedLinkCorner {
     position: absolute;
-    top: 6rem;
+    top: 6.5rem;
+    right: 0.5rem;
     z-index: 1;
   }
 
