@@ -3,7 +3,6 @@ import _get from 'lodash/get'
 import { Link, graphql } from 'gatsby'
 import { ChevronLeft } from 'react-feather'
 
-import Image from '../components/Image'
 import Content from '../components/Content'
 import Layout from '../components/Layout'
 import './SinglePost.css'
