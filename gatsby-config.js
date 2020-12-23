@@ -66,7 +66,7 @@ module.exports = {
       options: {
         postCssPlugins: [
           postcssPresetEnv({
-            browserslist: '> 0.5%, last 2 versions, ie 11'
+            browsers: '> 0.5%, last 2 versions, ie 11'
           })
         ]
       }
@@ -76,7 +76,7 @@ module.exports = {
       options: {
         postCssPlugins: [
           require(`postcss-preset-env`)({
-            browserslist: '> 0.5%, last 2 versions, ie 11'
+            browsers: '> 0.5%, last 2 versions, ie 11'
           })
         ]
       }
