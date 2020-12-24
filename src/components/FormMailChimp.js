@@ -7,7 +7,7 @@ import './Form.css'
 class Form extends React.Component {
   static defaultProps = {
     name: 'Subscribe to Newsletter',
-    action: 'http://littlelightshouston.us10.list-manage.com/subscribe/post',
+    action: 'https://littlelightshouston.us10.list-manage.com/subscribe/post',
     u: '26f504be9379335237475e06a',
     id: '624f7bb624',
     successMessage: 'Thanks for subscribing to the Little Lights newsletter!',
