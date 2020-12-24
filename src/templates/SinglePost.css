@@ -3,7 +3,6 @@
 }
 
 .SinglePost--BackButton {
-  color: white;
   position: relative;
   display: flex;
   align-items: center;
@@ -16,6 +15,7 @@
   transition: transform 0.2s ease-out;
   transform: translateX(0);
   height: 1.2em;
+  margin: 1rem;
 }
 
 .SinglePost--BackButton:hover svg,

@@ -5,6 +5,7 @@ import { ChevronLeft } from 'react-feather'
 
 import Content from '../components/Content'
 import Layout from '../components/Layout'
+import PageHeader from '../components/PageHeader'
 import './SinglePost.css'
 
 export const SinglePostTemplate = ({
@@ -17,62 +18,40 @@ export const SinglePostTemplate = ({
 }) => (
   <main>
     <article
-      className="SinglePost section light"
       itemScope
       itemType="http://schema.org/BlogPosting"
     >
-      <div className="container skinny">
-        <Link className="SinglePost--BackButton" to="/blog/">
-          <ChevronLeft /> BACK
-        </Link>
-        <div className="SinglePost--Content relative">
-          <div className="SinglePost--Meta">
-            {date && (
-              <time
-                className="SinglePost--Meta--Date"
-                itemProp="dateCreated pubdate datePublished"
-                date={date}
-              >
-                {date}
-              </time>
-            )}
-          </div>
+      <PageHeader
+        title={title}
+        subtitle={date}
+        backgroundImage={featuredImage}
+      />
+      <Link className="SinglePost--BackButton" to="/blog/">
+        <ChevronLeft /> BACK
+      </Link>
+      <div className="SinglePost--Content relative">
 
-          {title && (
-            <h1 className="SinglePost--Title" itemProp="title">
-              {title}
-            </h1>
+        <div className="SinglePost--InnerContent">
+          <Content source={body} />
+        </div>
+
+        <div className="SinglePost--Pagination">
+          {prevPostURL && (
+            <Link
+              className="SinglePost--Pagination--Link prev"
+              to={prevPostURL}
+            >
+              Previous Post
+            </Link>
           )}
-
-          <div className="SinglePost--InnerContent">
-            {featuredImage && (
-              <img
-                src={featuredImage}
-                alt={title}
-                style={{width: "100%"}}
-              />
-            )}
-            <Content source={body} />
-          </div>
-
-          <div className="SinglePost--Pagination">
-            {prevPostURL && (
-              <Link
-                className="SinglePost--Pagination--Link prev"
-                to={prevPostURL}
-              >
-                Previous Post
-              </Link>
-            )}
-            {nextPostURL && (
-              <Link
-                className="SinglePost--Pagination--Link next"
-                to={nextPostURL}
-              >
-                Next Post
-              </Link>
-            )}
-          </div>
+          {nextPostURL && (
+            <Link
+              className="SinglePost--Pagination--Link next"
+              to={nextPostURL}
+            >
+              Next Post
+            </Link>
+          )}
         </div>
       </div>
     </article>
