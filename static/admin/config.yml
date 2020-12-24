@@ -36,8 +36,8 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Slug, name: slug, widget: hidden, default: '' }
           - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string, required: false }
           - { label: Featured Image, name: featuredImage, widget: image }
-          - { label: Subtitle, name: subtitle, widget: markdown, required: false }
           - { label: Body, name: body, widget: markdown }
           - label: 'Accordion'
             name: 'accordion'
@@ -83,8 +83,8 @@ collections: # A list of collections the CMS should be able to edit
             }
           - { label: Slug, name: slug, widget: hidden, default: 'blog' }
           - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string, required: false }
           - { label: Featured Image, name: featuredImage, widget: image }
-          - { label: Subtitle, name: subtitle, widget: markdown }
           - label: 'Meta'
             required: false
             name: 'meta'
@@ -129,7 +129,7 @@ collections: # A list of collections the CMS should be able to edit
               options:
                 { media_library: { config: { imageShrink: 2600x2600 } } },
             }
-          - { label: Subtitle, name: subtitle, widget: markdown }
+          - { label: Subtitle, name: subtitle, widget: string, required: false }
           - { label: Body, name: body, widget: markdown }
           - { label: Email Address, name: email, widget: string }
           - label: 'Meta'
@@ -173,6 +173,7 @@ collections: # A list of collections the CMS should be able to edit
         }
       - { label: Slug, name: slug, widget: string }
       - { label: Title, name: title, widget: string }
+      - { label: Subtitle, name: subtitle, widget: string, required: false }
       - { label: Featured Image, name: featuredImage, widget: image }
       - { label: Body, name: body, widget: markdown }
       - label: 'Meta'
