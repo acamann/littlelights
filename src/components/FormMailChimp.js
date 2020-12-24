@@ -7,7 +7,9 @@ import './Form.css'
 class Form extends React.Component {
   static defaultProps = {
     name: 'Subscribe to Newsletter',
-    action: '',
+    action: 'http://littlelightshouston.us10.list-manage.com/subscribe/post',
+    u: '26f504be9379335237475e06a',
+    id: '624f7bb624',
     successMessage: 'Thanks for subscribing to the Little Lights newsletter!',
     errorMessage: 'There is a problem & your message has not been sent, please try contacting us via email'
   }
@@ -52,7 +54,7 @@ class Form extends React.Component {
   }
 
   render() {
-    const { name, action } = this.props
+    const { name, action, u, id } = this.props
 
     return (
       <form
@@ -63,6 +65,8 @@ class Form extends React.Component {
         data-netlify=""
         netlify-recaptcha=""
       >
+        <input type="hidden" name="u" value={u} />
+        <input type="hidden" name="id" value={id} />
         {this.state.alert && (
           <div className="Form--Alert">{this.state.alert}</div>
         )}
@@ -72,7 +76,8 @@ class Form extends React.Component {
               className="Form--Input Form--InputText"
               type="text"
               placeholder="First"
-              name="firstname"
+              name="FNAME"
+              id="mce-FNAME"
               required
             />
             <span>First</span>
@@ -82,7 +87,8 @@ class Form extends React.Component {
               className="Form--Input Form--InputText"
               type="text"
               placeholder="Last"
-              name="lastname"
+              name="LNAME"
+              id="mce-LNAME"
               required
             />
             <span>Last</span>
@@ -93,12 +99,13 @@ class Form extends React.Component {
             className="Form--Input Form--InputText"
             type="email"
             placeholder="Email"
-            name="emailAddress"
+            name="EMAIL"
+            id="mce-EMAIL"
             required
           />
           <span>Email address</span>
         </label>
-        <input type="hidden" name="form-name" value={name} />
+        <div style={{"position": "absolute", "left": -5000 }}><input type="text" name="b_26f504be9379335237475e06a_624f7bb624" tabindex="-1" value="" /></div>
         <input
           className="Button Form--SubmitButton"
           type="submit"
