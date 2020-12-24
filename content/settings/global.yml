@@ -3,6 +3,7 @@ siteUrl: https://littlelightshouston.netlify.app
 siteDescription: Little Lights is an organization in Houston, TX that offers fun
   and engaging local outreach and service opportunities to families with young
   children.
-socialMediaCard:
-  image: https://ucarecdn.com/175d89fe-f697-47e2-88d4-6eb39bea57b6/
+siteLogo: https://ucarecdn.com/175d89fe-f697-47e2-88d4-6eb39bea57b6/
+facebookUrl: https://www.facebook.com/LittleLightsHouston/
+email: littlelightshouston@gmail.com
 googleTrackingId: UA-133175780-1

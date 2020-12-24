@@ -3,11 +3,11 @@ import './Footer.css'
 import EmailLink from './EmailLink'
 import FacebookLink from './FacebookLink'
 
-export default () => (
+export default ({ facebookUrl, email }) => (
   <div>
     <h2 className="taCenter">
-      <EmailLink url="mailto:littlelightshouston@gmail.com" />{" "}
-      <FacebookLink url="https://www.facebook.com/LittleLightsHouston/" />
+      { email && <EmailLink url={`mailto:${email}`} />}{" "}
+      { facebookUrl && <FacebookLink url={facebookUrl} />}
     </h2>
     <br />
     <footer className="footer">

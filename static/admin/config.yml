@@ -258,11 +258,9 @@ collections: # A list of collections the CMS should be able to edit
               widget: text,
               required: false,
             }
-          - label: Social Media Card
-            name: socialMediaCard
-            widget: object
-            fields:
-              - { label: Image, name: image, widget: image, required: false }
+          - { label: Site Logo, name: siteLogo, widget: image, required: false } # use this somehow?
+          - { label: Facebook Url, name: facebookUrl, widget: string, required: false }
+          - { label: Email, name: email, widget: string, required: false }
           - {
               label: Google Analytics Tracking Id,
               name: googleTrackingId,

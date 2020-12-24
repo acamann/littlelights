@@ -18,9 +18,9 @@ export default ({ children, meta, title }) => {
             siteTitle
             siteDescription
             googleTrackingId
-            socialMediaCard {
-              image
-            }
+            siteLogo
+            facebookUrl
+            email
           }
           allPosts: allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
@@ -39,7 +39,7 @@ export default ({ children, meta, title }) => {
         }
       `}
       render={data => {
-        const { siteTitle, socialMediaCard, googleTrackingId } =
+        const { siteTitle, siteLogo, googleTrackingId, facebookUrl, email } =
             data.settingsYaml || {},
           subNav = {
             posts: data.allPosts.hasOwnProperty('edges')
@@ -63,22 +63,18 @@ export default ({ children, meta, title }) => {
 
             <Meta
               googleTrackingId={googleTrackingId}
-              absoluteImageUrl={
-                socialMediaCard &&
-                socialMediaCard.image &&
-                socialMediaCard.image
-              }
+              absoluteImageUrl={siteLogo}
               {...meta}
               {...data.settingsYaml}
             />
 
-            <FeaturedLinkCorner url="https://www.facebook.com/LittleLightsHouston/" />
+            <FeaturedLinkCorner url={facebookUrl} />
 
             <Nav subNav={subNav} />
 
             <Fragment>{children}</Fragment>
 
-            <Footer />
+            <Footer facebookUrl={facebookUrl} email={email} />
           </Fragment>
         )
       }}
