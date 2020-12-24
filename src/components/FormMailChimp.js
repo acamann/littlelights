@@ -1,5 +1,4 @@
 import React from 'react'
-import { stringify } from 'qs'
 import { serialize } from 'dom-form-serializer'
 
 import './Form.css'
@@ -7,11 +6,11 @@ import './Form.css'
 class Form extends React.Component {
   static defaultProps = {
     name: 'Subscribe to Newsletter',
-    action: 'https://littlelightshouston.us10.list-manage.com/subscribe/post',
+    action: 'http://littlelightshouston.us10.list-manage.com/subscribe/post',
     u: '26f504be9379335237475e06a',
     id: '624f7bb624',
     successMessage: 'Thanks for subscribing to the Little Lights newsletter!',
-    errorMessage: 'There is a problem & your message has not been sent, please try contacting us via email'
+    errorMessage: 'There is a problem & you have not been subscribed to the newsletter, please try sending us an email'
   }
 
   state = {
@@ -27,8 +26,12 @@ class Form extends React.Component {
     const form = e.target
     const data = serialize(form)
     this.setState({ disabled: true })
-    fetch(form.action + '?' + stringify(data), {
-      method: 'POST'
+    fetch(form.action, {
+      method: 'POST',
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data)
     })
       .then(res => {
         if (res.ok) {
@@ -105,7 +108,6 @@ class Form extends React.Component {
           />
           <span>Email address</span>
         </label>
-        <div style={{"position": "absolute", "left": -5000 }}><input type="text" name="b_26f504be9379335237475e06a_624f7bb624" tabindex="-1" value="" /></div>
         <input
           className="Button Form--SubmitButton"
           type="submit"
