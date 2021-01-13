@@ -16,7 +16,6 @@ class Form extends React.Component {
     event.preventDefault()
     if (this.state.disabled) return;
 
-    console.log(this.state);
     this.setState({ disabled: true })
     addToMailchimp(
       this.state.email, 
