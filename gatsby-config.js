@@ -1,5 +1,9 @@
 const postcssPresetEnv = require('postcss-preset-env')
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: 'Little Lights',
@@ -122,6 +126,12 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
         stylesPath: `${__dirname}/src/cms/admin.css`,
         enableIdentityWidget: true
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: process.env.MAILCHIMP_ENDPOINT,
       }
     },
     'gatsby-plugin-netlify' // make sure to keep it last in the array

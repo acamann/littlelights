@@ -1,77 +1,52 @@
 import React from 'react'
-import { serialize } from 'dom-form-serializer'
+import addToMailchimp from 'gatsby-plugin-mailchimp'
 
 import './Form.css'
 
 class Form extends React.Component {
-  static defaultProps = {
-    name: 'Subscribe to Newsletter',
-    action: 'https://littlelightshouston.us10.list-manage.com/subscribe/post',
-    u: '26f504be9379335237475e06a',
-    id: '624f7bb624',
-    successMessage: 'Thanks for subscribing to the Little Lights newsletter!',
-    errorMessage: 'There is a problem & you have not been subscribed to the newsletter, please try sending us an email'
-  }
-
   state = {
     alert: '',
-    disabled: false
+    disabled: false,
+    first: '',
+    last: '',
+    email: '',
   }
 
-  handleSubmit = e => {
-    e.preventDefault()
-    if (this.state.disabled) return
+  handleSubmit = (event) => {
+    event.preventDefault()
+    if (this.state.disabled) return;
 
-    // TODO: make this actually subscribe to mailchimp
-    const form = e.target
-    const data = serialize(form)
+    console.log(this.state);
     this.setState({ disabled: true })
-    fetch(form.action, {
-      method: 'POST',
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(data)
+    addToMailchimp(
+      this.state.email, 
+      {
+        FNAME: this.state.first,
+        LMANE: this.state.last
+      }
+    ).then(({ msg, result }) => {
+      if (result !== 'success') {
+        throw msg
+      }
+      this.setState({ alert: msg })
+    }).catch(err => {
+      this.setState({ alert: err })
+    }).finally(() => {
+      this.setState({ disabled: false, first: '', last: '', email: '' })
     })
-      .then(res => {
-        if (res.ok) {
-          return res
-        } else {
-          throw new Error('Network error')
-        }
-      })
-      .then(() => {
-        form.reset()
-        this.setState({
-          alert: this.props.successMessage,
-          disabled: false
-        })
-      })
-      .catch(err => {
-        console.error(err)
-        this.setState({
-          disabled: false,
-          alert: this.props.errorMessage
-        })
-      })
   }
 
   render() {
-    const { name, action, u, id } = this.props
-
     return (
       <form
         className="Form"
-        name={name}
-        action={action}
+        name="Subscribe to Newsletter"
         onSubmit={this.handleSubmit}
         data-netlify=""
         netlify-recaptcha=""
       >
-        <input type="hidden" name="u" value={u} />
-        <input type="hidden" name="id" value={id} />
         {this.state.alert && (
-          <div className="Form--Alert">{this.state.alert}</div>
+          <div className="Form--Alert" dangerouslySetInnerHTML={{ __html: this.state.alert}}></div>
         )}
         <div className="Form--Group">
           <label className="Form--Label">
@@ -79,8 +54,9 @@ class Form extends React.Component {
               className="Form--Input Form--InputText"
               type="text"
               placeholder="First"
-              name="FNAME"
-              id="mce-FNAME"
+              name="first"
+              value={this.state.first}
+              onChange={(e) => this.setState({ first: e.target.value })}
               required
             />
             <span>First</span>
@@ -90,8 +66,9 @@ class Form extends React.Component {
               className="Form--Input Form--InputText"
               type="text"
               placeholder="Last"
-              name="LNAME"
-              id="mce-LNAME"
+              name="last"
+              value={this.state.last}
+              onChange={(e) => this.setState({ last: e.target.value })}
               required
             />
             <span>Last</span>
@@ -102,8 +79,9 @@ class Form extends React.Component {
             className="Form--Input Form--InputText"
             type="email"
             placeholder="Email"
-            name="EMAIL"
-            id="mce-EMAIL"
+            name="email"
+            value={this.state.email}
+            onChange={(e) => this.setState({ email: e.target.value })}
             required
           />
           <span>Email address</span>
