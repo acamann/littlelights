@@ -3,6 +3,8 @@
   top: 0;
   right: 0;
   z-index: 3;
+  display: flex;
+  align-items: center;
 }
 .FeaturedLinkCorner svg {
   color: #fff;
@@ -26,6 +28,8 @@
     top: 6.5rem;
     right: 0.5rem;
     z-index: 1;
+    display: flex;
+    align-items: center;
   }
 
   .FeaturedLinkCorner:hover .octo-arm {
