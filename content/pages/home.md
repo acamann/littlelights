@@ -4,7 +4,7 @@ slug: ""
 title: Little Lights Houston
 subtitle: Little Lights is an organization that offers fun and engaging local
   outreach opportunities to families with young children.
-featuredImage: https://ucarecdn.com/59af9e8e-6a2e-4145-b1c1-2dd188203c25/-/crop/639x338/0,131/-/preview/
+featuredImage: https://ucarecdn.com/c761a727-d865-4626-b239-ba8ab7c4b7a6/
 meta:
   description: Little Lights is an organization in Houston, TX that offers fun and
     engaging local outreach and service opportunities to families with young
