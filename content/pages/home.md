@@ -2,9 +2,9 @@
 template: HomePage
 slug: ""
 title: Little Lights Houston
-featuredImage: https://ucarecdn.com/3d4d0596-1f90-4512-8661-027d0d870400/-/preview/-/enhance/50/
 subtitle: Little Lights is an organization that offers fun and engaging local
   outreach opportunities to families with young children.
+featuredImage: https://ucarecdn.com/59af9e8e-6a2e-4145-b1c1-2dd188203c25/-/crop/639x338/0,131/-/preview/
 meta:
   description: Little Lights is an organization in Houston, TX that offers fun and
     engaging local outreach and service opportunities to families with young
@@ -25,7 +25,7 @@ Little Lights gives young children the chance to make a big impact. It's powerfu
 
 Our local organizations need volunteers and for their causes to be heard. We, as their community, are here to support, encourage and serve those organizations through Christ in a small way so that they can help others.
 
-![](https://ucarecdn.com/e241d82d-501b-40b7-9f3e-acb5c020fd3d/-/preview/-/enhance/50/)
+![](https://ucarecdn.com/fc0c4b4c-f0a2-47a8-b66f-92a6c6750061/-/crop/543x283/27,160/-/preview/)
 
 Little Lights Houston looks for local outreach opportunities that are age appropriate and fun for young children as well as meaningful and impactful for both the organizations and families involved. A volunteer from Little Lights would be at every activity, shepherding the children and families and acting as a liaison to the organization.
 
