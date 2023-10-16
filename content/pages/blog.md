@@ -1,10 +1,10 @@
 ---
 template: BlogIndex
 slug: blog
-title: Newsletters
-subtitle: Learn about previous outreach events
-featuredImage: https://ucarecdn.com/47db6452-1a60-4d94-8b44-cba6b196625d/
+title: 2023-2024 Events
+subtitle: ""
+featuredImage: https://ucarecdn.com/6dd59378-8f13-4438-852b-7f7d6ec0ed6b/
 meta:
   description: This is a meta description.
-  title: Newsletters
+  title: "2023-2024 Events "
 ---
