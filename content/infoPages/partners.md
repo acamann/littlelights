@@ -3,7 +3,7 @@ template: DefaultPage
 slug: partners
 title: Partners
 subtitle: Community Organizations We Serve
-featuredImage: https://ucarecdn.com/e996148c-b090-437a-a39a-5efbade9e992/
+featuredImage: https://ucarecdn.com/217f3ea8-d00a-4c1b-ad08-d585021e559b/
 meta:
   description: This is a meta description.
   title: Partners Page
