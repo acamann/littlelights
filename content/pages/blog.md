@@ -3,7 +3,7 @@ template: BlogIndex
 slug: blog
 title: 2023-2024 Events
 subtitle: ""
-featuredImage: https://ucarecdn.com/6dd59378-8f13-4438-852b-7f7d6ec0ed6b/
+featuredImage: https://ucarecdn.com/b2ec7a4e-2778-4546-8361-c883f2ac407c/
 meta:
   description: This is a meta description.
   title: "2023-2024 Events "
