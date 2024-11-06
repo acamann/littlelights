@@ -2,7 +2,7 @@
 template: ContactPage
 slug: contact
 title: Contact Us
-featuredImage: https://ucarecdn.com/da19a7ae-2a8e-4476-b11d-9390acb68c83/-/preview/-/enhance/50/
+featuredImage: https://ucarecdn.com/1d6c4c8c-2a34-4697-babe-fe8cb01021e3/
 subtitle: Sign up for our monthly newsletters to hear about upcoming events!
 email: littlelightshouston@gmail.com
 meta:
