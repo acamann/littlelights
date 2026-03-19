@@ -19,5 +19,5 @@ meta:
 * Bayou City Blessings in a Backpack
 * Houston Welcomes Refugees 
 * Foster Village Houston 
-* MDUMC Soupmobile
+* MDUMC
 * CAPS
